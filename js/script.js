@@ -32,7 +32,7 @@ xhrFields:{
 
 $.ajax({
     type: 'GET',
-    url: base_url + 'jobposts/findmyonlydata',
+    url: base_url + 'eventposts/findmyonlydata',
     success: function (heroes) {
         let myRows = [];
         $.each(heroes, function (index, hero) {
@@ -48,14 +48,14 @@ $.ajax({
 tblBody.on('click', '.delete', function () {
     $.ajax({
         type: 'DELETE',
-        url: base_url + 'jobposts/' + $(this).attr('hero_id'),
+        url: base_url + 'eventposts/' + $(this).attr('hero_id'),
         success: function () {
             location.reload();
         }
     })
 });
 
-tblBody.on('click', '#updatejobpost', function () {
+tblBody.on('click', '#updateeventpost', function () {
 
     alert("hhhhhhhhhhhhhhhhhh"+$(this).attr('post_id'));
     
@@ -128,7 +128,7 @@ tblBody.on('click', '#updatejobpost', function () {
    console.log(jobposts);
    $.ajax({
       type: 'PUT',
-      url: 'http://localhost:3000/jobposts/'+ $(this).attr('post_id'),
+      url: 'http://localhost:3000/eventposts/'+ $(this).attr('post_id'),
       data: jobposts,
   
     //   {"Description":Description,"name":name,"JobType":JobType,"Applicant":Applicant,"Deadline":Deadline,"Salary":Salary}

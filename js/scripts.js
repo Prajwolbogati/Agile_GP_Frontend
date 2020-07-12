@@ -80,7 +80,7 @@ $("#update-job").on('click','.view', function (e) {
      console.log(user);
      $.ajax({
          type: 'PUT',
-         url: 'http://localhost:3000/jobposts/'+ $(this).attr('post_id'),
+         url: 'http://localhost:3000/eventposts/'+ $(this).attr('post_id'),
          data: user,
  
          success: function (user) {

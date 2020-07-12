@@ -26,7 +26,7 @@ $(function () {
   
   $.ajax({
       type: 'GET',
-      url: base_url + 'jobposts',
+      url: base_url + 'eventposts',
       success: function (heroes) {
           let myRows = [];
           $.each(heroes, function (index, hero) {
